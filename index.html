@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stein-Schere-Papier</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="js/SteinScherePapier.js"></script>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+
+
+jQuery(function(){
+	steinScherePapier.openWebSocket();
+	steinScherePapier.addCommandListeners();
+});
+</script>
+</head>
+
+<body>
+<h1><small>WebSockets Demo:</small> Stein Schere Papier Echse Spock</h1>
+
+<div id="fehler"></div>
+<div id="dein_zug" style="display:none;">
+<h2>Dein nächster Zug</h2>
+<p>
+	<a href="#" data-wahl="Stein"><img src="img/stein.png" alt="Stein" title="Stein"></a>
+	<a href="#" data-wahl="Schere"><img src="img/schere.png" alt="Schere" title="Schere"></a>
+	<a href="#" data-wahl="Papier"><img src="img/papier.png" alt="Papier" title="Papier"></a>
+	<a href="#" data-wahl="Echse"><img src="img/echse.png" alt="Echse" title="Echse"></a>
+	<a href="#" data-wahl="Spock"><img src="img/spock.png" alt="Spock" title="Spock"></a>
+	<br/>
+	<div id="zug_auswahl">&nbsp;</div>
+	<div id="letzter_zug"></div>
+</p>
+</div>
+
+<div id="auswertung" style="display:none;">
+	<h2>Teilnehmer und Spielstand</h2>
+</div>
+
+<span id="loesung_zeigen" onclick="if (confirm('Willst du dir wirklich den Spaß verderben?')) { jQuery(this).remove(); jQuery('#loesung').show(1000); }">Lösung zeigen</span>
+<div id="loesung">
+	<img src="img/loesung.png">
+	<p>
+		Schere schneidet Papier,<br/>
+		Papier bedeckt Stein, <br/>
+		Stein zerquetscht Echse, <br/>
+		Echse vergiftet Spock. <br/>
+		Spock zertrümmert Schere,<br/> 
+		Schere köpft Echse, <br/>
+		Echse frisst Papier. <br/>
+		Papier widerlegt Spock, <br/>
+		Spock verdampft Stein. <br/>
+		Stein schleift Schere.<br/>
+	</p>
+</div>
+</body>
+</html>

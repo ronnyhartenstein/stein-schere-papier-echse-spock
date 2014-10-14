@@ -1,0 +1,49 @@
+
+body {
+	margin-left: 30px;
+}
+
+#letzter_zug {
+	color: #2667C6; 
+	font-size: 2em; 
+	margin: 20px 0; 
+	font-weight: bold;
+}
+
+[onclick] {
+	cursor: pointer;
+}
+
+
+#fehler {
+	color: red;
+}
+
+
+#loesung_zeigen {
+	color: gray;
+	font-style: italic;
+	font-size: 0.8em;
+}
+
+#loesung {
+	display: none; 
+	margin-top: 100px;
+}
+
+#loesung img {
+	display: block;
+	float: left; 
+	padding: 10px; 
+	background-color: #f0f0f0; 
+	border-radius: 20px; 
+	box-shadow: 0 0 20px #f0f0f0;
+}
+
+#loesung p {
+	display: block;
+	float: left;
+	width: 500px; 
+	margin-left: 20px; 
+	font-style: italic;
+}
